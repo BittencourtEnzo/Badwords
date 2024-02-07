@@ -1,1 +1,41 @@
 #vamos filhos altivos dos ares
+
+#def tratamento(nome):
+    
+
+
+#caso 1: sem caracteres especiais, separação por espaços
+def caso1(nome):
+    nome_sorted = [*nome]
+    nome_sorted.sort()
+    return nome_sorted
+
+#caso 2: sem caracteres especiais, juntando os espaços
+
+def caso2(nome):
+    primeiro = []
+    ultimo = []
+    nome = nome.lower()
+    nome = [*nome]
+    for n in range(0,len(nome)):
+        if nome[n] == ' ':
+            primeiro = nome[0:n]
+            ultimo = nome[n+1:len(nome)+1]
+    primeiro.sort()
+    ultimo.sort()
+    return primeiro, ultimo
+
+
+#caso 3: com caracteres especiais
+
+
+#nomes-teste:
+nome1 = "Jorge da Silva"
+nome2 = "Jorge"
+nome3 = "Jorge Sun-glass"
+nome4 = "caralho"
+nome5 = "caraleo"
+nome6 = "cara!ho"
+nome7 = "caralh*"
+nome8 = "car alho"
+nome9 = "ohlarac"
