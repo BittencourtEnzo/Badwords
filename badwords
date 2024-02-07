@@ -11,14 +11,20 @@ def caso1(nome):
     for l in nome_splited:
         if l != ' ':
             temp.append(l)
-    nome_splited = temp.join()
-    resultado1 = afuncaola(nome_splited)
+    nome_splited =  "".join(temp)
+    #print(nome_splited)
+    aux = [nome_splited]
+    resultado1 = afuncaola(aux)
     
     #invocando o caso3:
-    nome_sorted = temp.sort()
-    nome_sorted = nome_sorted.join()
-    resultado3 = caso3(nome_sorted)
-    
+    #print(type(temp))
+    temp.sort()
+    nome_sorted = temp
+    #print(nome_sorted)
+    nome_sorted = "".join(nome_sorted)
+    aux = [nome_sorted]
+    resultado3 = caso3(aux)
+    #print(resultado1)
     return resultado1 or resultado3
 
 #caso 2: separar por espaços e comparar as partes com a lista
@@ -32,29 +38,59 @@ def caso2(nome):
         if l != ' ':
             temp.append(l)
         else:
-            temp_joined = temp.join()
-            resultado = afuncaola(temp_joined)
-        
-        if resultado:
-            return True
-        nome_sorted = temp.sort()
-        nome_sorted = nome_sorted.join()
-        if caso3(nome_sorted):
-            return True
+            temp_joined = "".join(temp)
+            aux = [temp_joined]
+            print(aux)
+            resultado = afuncaola(aux)
+            if resultado:
+                return True
+            temp.sort()
+            nome_sorted = temp
+            nome_sorted = "".join(nome_sorted)
+            aux = [nome_sorted]
+            if caso3(aux):
+                return True
+            temp = []
     
+    temp_joined = "".join(temp)
+    aux = [temp_joined]
+    print(aux)
+    resultado = afuncaola(aux)
+    if resultado:
+        return True
+    temp.sort()
+    nome_sorted = temp
+    nome_sorted = "".join(nome_sorted)
+    aux = [nome_sorted]
+    if caso3(aux):
+        return True
+    temp = []
+    
+    return False
 
 #caso 3: pegar UM nome ordenado e comparar
 def caso3(nome_sorted):
     return afuncaola(nome_sorted)
 
+#função main:
+def main(palavra):
+    #print(caso1(palavra))
+    #print(caso2(palavra))
+    return caso1(palavra) or caso2(palavra)
+    
 
 #nomes-teste:
-nome1 = "Jorge da Silva"
-nome2 = "Jorge"
-nome3 = "Jorge Sun-glass"
-nome4 = "caralho"
-nome5 = "caraleo"
-nome6 = "cara!ho"
-nome7 = "caralh*"
-nome8 = "car alho"
-nome9 = "ohlarac"
+nome1 = "Jorge da Silva" #ok
+nome2 = "Jorge" #ok
+nome3 = "Jorge Sun-glass" #tenho que ver
+nome4 = "caralho" #ok
+nome5 = "caraleo" #tenho que ver
+nome6 = "cara!ho" #tenho que ver
+nome7 = "caralh*" #tenho que ver
+nome8 = "car alho" #ok
+nome9 = "ohlarac" #tenho que fazer a comparacao com a lista sorted
+nome10 = "caralho alado" #ok
+nome11 = "alado caralho" #ok
+
+final = main(nome11)
+print(final)

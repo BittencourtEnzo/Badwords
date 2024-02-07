@@ -1,7 +1,4 @@
 
-def teste(nome):
-    nome = "a"
-    
-nome = "Jorge"
-teste(nome)
-print(nome)
+list = ['j', 'o', 'r', 'g', 'e', ' ', 'd', 'a', ' ', 's', 'i', 'l', 'v', 'a']
+list.sort()
+print(list)

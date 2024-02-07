@@ -31,7 +31,11 @@ def filtro(palavra):
 #palavras = ['aborto','aranha','morte']
 
 def afuncaola(palavras):
+    #print(palavras)
     teste = list(filter(filtro,palavras))
+    #print(teste)
+    #print(len(teste))
     #se for true é porque tinha palavrao
-    print("Tinha palavrao =",teste != [])
-    return teste !=[]
+    #print("Tinha palavrao =",teste != [])
+    return len(teste) != 0
+
