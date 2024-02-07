@@ -1,32 +1,51 @@
 #vamos filhos altivos dos ares
 
-#def tratamento(nome):
-    
+from lista import afuncaola  
+#caso 0: se tiver caracteres especiais
 
-
-#caso 1: sem caracteres especiais, separação por espaços
+#caso 1: tirar espaços e comparar tudo com a lista
 def caso1(nome):
-    nome_sorted = [*nome]
-    nome_sorted.sort()
-    return nome_sorted
+    nome = nome.lower()
+    nome_splited = [*nome]
+    temp = []
+    for l in nome_splited:
+        if l != ' ':
+            temp.append(l)
+    nome_splited = temp.join()
+    resultado1 = afuncaola(nome_splited)
+    
+    #invocando o caso3:
+    nome_sorted = temp.sort()
+    nome_sorted = nome_sorted.join()
+    resultado3 = caso3(nome_sorted)
+    
+    return resultado1 or resultado3
 
-#caso 2: sem caracteres especiais, juntando os espaços
+#caso 2: separar por espaços e comparar as partes com a lista
 
 def caso2(nome):
-    primeiro = []
-    ultimo = []
     nome = nome.lower()
-    nome = [*nome]
-    for n in range(0,len(nome)):
-        if nome[n] == ' ':
-            primeiro = nome[0:n]
-            ultimo = nome[n+1:len(nome)+1]
-    primeiro.sort()
-    ultimo.sort()
-    return primeiro, ultimo
+    nome_splited = [*nome]
+    temp = []
+    resultado = False
+    for l in nome_splited:
+        if l != ' ':
+            temp.append(l)
+        else:
+            temp_joined = temp.join()
+            resultado = afuncaola(temp_joined)
+        
+        if resultado:
+            return True
+        nome_sorted = temp.sort()
+        nome_sorted = nome_sorted.join()
+        if caso3(nome_sorted):
+            return True
+    
 
-
-#caso 3: com caracteres especiais
+#caso 3: pegar UM nome ordenado e comparar
+def caso3(nome_sorted):
+    return afuncaola(nome_sorted)
 
 
 #nomes-teste:
