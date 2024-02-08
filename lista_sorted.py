@@ -1,7 +1,7 @@
 lista = []
 
 f = open('/home/enzo.bittencourt/Badwords/Badwords/pt.txt','r')
-for i in range(1,77):
+for i in range(1,790):
     linha=f.readline()
     linha = linha[0:len(linha)-1]
     linha = [*linha]

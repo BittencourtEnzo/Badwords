@@ -75,8 +75,10 @@ def caso3(nome_sorted):
 
 #função main:
 def main(palavra):
-    #special_characters = ""!@#$%^&*()-+?_=,<>/""
-    #if any(c in special_characters for c in palavra):
+    special_characters = "!@#$%^&*()-+?_=,<>/1234567890"
+    if any(c in special_characters for c in palavra):        
+        print("Por favor, não use caracteres especiais. O seu nome certamente não tem esses caracteres!")
+        return True
     #print(caso1(palavra))
     #print(caso2(palavra))
     return caso1(palavra) or caso2(palavra)
@@ -94,8 +96,9 @@ nome8 = "car alho" #ok
 nome9 = "ohlarac" #ok
 nome10 = "caralho alado" #ok
 nome11 = "alado caralho" #ok
+nome12 = "meu nome é vadia"
 
 #casos faltantes: 1 letra faltando (augmentation)
 
-final = main(nome9)
+final = main(nome12)
 print(final)
