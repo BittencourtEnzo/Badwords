@@ -41,3 +41,11 @@ def afuncaola(palavras):
     #print("Tinha palavrao =",teste != [])
     return len(teste) != 0
 
+def funcaocontrario(palavra):
+    for palavrao in lista:
+        #print(palavrao)
+        if palavra.__contains__(palavrao):
+            #print("Funcionou")
+            return True
+    return False
+

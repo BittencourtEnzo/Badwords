@@ -45,3 +45,11 @@ def afuncaola_sorted(palavras):
     #print("Tinha palavrao =",teste != [])
     #print(lista)
     return len(teste) != 0
+
+def funcaocontrario_sorted(palavra):
+    for palavrao in lista:
+        #print(palavrao)
+        if palavra.__contains__(palavrao):
+            #print("Funcionou")
+            return True
+    return False
