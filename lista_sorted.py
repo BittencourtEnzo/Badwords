@@ -4,6 +4,7 @@ f = open('/home/enzo.bittencourt/Badwords/Badwords/pt.txt','r')
 for i in range(1,790):
     linha=f.readline()
     linha = linha[0:len(linha)-1]
+    linha = linha.lower()
     linha = [*linha]
     linha.sort()
     linha = "".join(linha)
@@ -14,6 +15,7 @@ f = open('/home/enzo.bittencourt/Badwords/Badwords/en.txt','r')
 for i in range(1,403):
     linha = f.readline()
     linha = linha[0:len(linha)-1]
+    linha = linha.lower()
     linha = [*linha]
     linha.sort()
     linha = "".join(linha)
@@ -41,5 +43,5 @@ def afuncaola_sorted(palavras):
     #print(len(teste))
     #se for true é porque tinha palavrao
     #print("Tinha palavrao =",teste != [])
-    print(lista)
+    #print(lista)
     return len(teste) != 0

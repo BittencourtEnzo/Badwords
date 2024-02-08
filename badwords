@@ -41,7 +41,7 @@ def caso2(nome):
         else:
             temp_joined = "".join(temp)
             aux = [temp_joined]
-            print(aux)
+            #print(aux)
             resultado = afuncaola(aux)
             if resultado:
                 return True
@@ -55,7 +55,7 @@ def caso2(nome):
     
     temp_joined = "".join(temp)
     aux = [temp_joined]
-    print(aux)
+    #print(aux)
     resultado = afuncaola(aux)
     if resultado:
         return True
@@ -87,18 +87,19 @@ def main(palavra):
 #nomes-teste:
 nome1 = "meu nome é Jorge da Silva caralho" #ok
 nome2 = "Jorge" #ok
-nome3 = "Jorge Sun-glass" #tenho que ver
+nome3 = "Jorge Sun-glass" #ok
 nome4 = "caralho" #ok
 nome5 = "caraleo" #tenho que ver
-nome6 = "cara!ho" #tenho que ver
-nome7 = "caralh*" #tenho que ver
+nome6 = "cara!ho" #ok
+nome7 = "caralh*" #ok
 nome8 = "car alho" #ok
 nome9 = "ohlarac" #ok
 nome10 = "caralho alado" #ok
 nome11 = "alado caralho" #ok
-nome12 = "meu nome é vadia"
-
+nome12 = "meu nome é vadia" #ok
+nome13 = "meu car alho" # ERRO
+nome14 = "escroto"
 #casos faltantes: 1 letra faltando (augmentation)
 
-final = main(nome12)
+final = main(nome14)
 print(final)
