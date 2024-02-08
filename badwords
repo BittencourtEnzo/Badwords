@@ -1,6 +1,7 @@
 #vamos filhos altivos dos ares
 
 from lista import afuncaola  
+from lista_sorted import afuncaola_sorted
 #caso 0: se tiver caracteres especiais
 
 #caso 1: tirar espaços e comparar tudo com a lista
@@ -70,17 +71,19 @@ def caso2(nome):
 
 #caso 3: pegar UM nome ordenado e comparar
 def caso3(nome_sorted):
-    return afuncaola(nome_sorted)
+    return afuncaola_sorted(nome_sorted)
 
 #função main:
 def main(palavra):
+    #special_characters = ""!@#$%^&*()-+?_=,<>/""
+    #if any(c in special_characters for c in palavra):
     #print(caso1(palavra))
     #print(caso2(palavra))
     return caso1(palavra) or caso2(palavra)
     
 
 #nomes-teste:
-nome1 = "Jorge da Silva" #ok
+nome1 = "meu nome é Jorge da Silva caralho" #ok
 nome2 = "Jorge" #ok
 nome3 = "Jorge Sun-glass" #tenho que ver
 nome4 = "caralho" #ok
@@ -88,9 +91,11 @@ nome5 = "caraleo" #tenho que ver
 nome6 = "cara!ho" #tenho que ver
 nome7 = "caralh*" #tenho que ver
 nome8 = "car alho" #ok
-nome9 = "ohlarac" #tenho que fazer a comparacao com a lista sorted
+nome9 = "ohlarac" #ok
 nome10 = "caralho alado" #ok
 nome11 = "alado caralho" #ok
 
-final = main(nome11)
+#casos faltantes: 1 letra faltando (augmentation)
+
+final = main(nome9)
 print(final)
