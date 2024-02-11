@@ -44,8 +44,9 @@ def afuncaola(palavras):
 def funcaocontrario(palavra):
     for palavrao in lista:
         #print(palavrao)
-        if palavra.__contains__(palavrao):
-            #print("Funcionou")
-            return True
+        if palavrao != "cu":
+            if palavra.__contains__(palavrao):
+                #print("Funcionou")
+                return True
     return False
 
