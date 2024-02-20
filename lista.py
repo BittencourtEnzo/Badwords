@@ -4,7 +4,7 @@
 lista = []
 
 f = open('/home/enzo.bittencourt/Badwords/Badwords/pt.txt','r')
-for i in range(1,790):
+for i in range(1,844):
     linha=f.readline()
     linha = linha[0:len(linha)-1]
     linha = linha.lower()
@@ -12,8 +12,9 @@ for i in range(1,790):
 f.close()
 
 f = open('/home/enzo.bittencourt/Badwords/Badwords/en.txt','r')
-for i in range(1,403):
-    linha = f.readline()
+for i in range(1,423):
+    linha = f.readline()    
+    linha = linha[0:len(linha)-1]
     linha = linha.lower()
     lista.append(linha)
 f.close()
@@ -32,7 +33,7 @@ def filtro(palavra):
 
 #palavras = ['aborto','aranha','morte']
 
-def afuncaola(palavras):
+def match(palavras):
     #print(palavras)
     teste = list(filter(filtro,palavras))
     #print(teste)
@@ -41,7 +42,7 @@ def afuncaola(palavras):
     #print("Tinha palavrao =",teste != [])
     return len(teste) != 0
 
-def funcaocontrario(palavra):
+def palavrao_na_string(palavra):
     for palavrao in lista:
         #print(palavrao)
         if palavrao != "cu":
