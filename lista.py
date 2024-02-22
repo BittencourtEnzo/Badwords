@@ -23,6 +23,8 @@ f.close()
 
 #funcao do filtro
 def filtro(palavra):
+    if palavra == ["pinto"]:
+        return False
     if palavra in lista:
         return True
     else:
@@ -31,23 +33,18 @@ def filtro(palavra):
 
 #agora testar
 
-#palavras = ['aborto','aranha','morte']
-
 def match(palavras):
+    if palavras[0] == "pinto":
+        return False
     #print(palavras)
     teste = list(filter(filtro,palavras))
-    #print(teste)
-    #print(len(teste))
-    #se for true é porque tinha palavrao
-    #print("Tinha palavrao =",teste != [])
     return len(teste) != 0
 
 def palavrao_na_string(palavra):
     for palavrao in lista:
         #print(palavrao)
-        if palavrao != "cu":
-            if palavra.__contains__(palavrao):
-                #print("Funcionou")
-                return True
+        whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag"] 
+        if palavrao not in whitelist and palavra.__contains__(palavrao):
+            #print("Funcionou")
+            return True
     return False
-

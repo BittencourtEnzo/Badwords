@@ -21,19 +21,19 @@ def metricas():
             true_p +=1
         else:
             false_n +=1
-            #print(word)
+            print(word)
     
     for word in lista_teste2:
         if main(word):
             true_p +=1
         else:
             false_n +=1
-            #print(word)
+            print(word)
 
     for word in lista_teste3:
         if main(word):
             false_p +=1
-            print(word)
+            #print(word)
         else:
             true_n +=1
 
@@ -41,12 +41,16 @@ def metricas():
     for word in lista_teste4:
         if main(word):
             false_p +=1
-            print(word)
+            #print(word)
         else:
             true_n +=1
 
 
     cm = [[true_p, false_n],[false_p,true_n]]
+    print(true_p)
+    print(true_n)
+    print(false_p)
+    print(false_n)
     accuracy = (true_p + true_n)/(true_p + true_n + false_p + false_n)
     precision = true_p/(true_p + false_p)
     recall = true_p/(true_p + false_n)
@@ -61,5 +65,3 @@ print("Accuracy:", accuracy)
 print("Precision: ", precision)
 print("Recall: ", recall)
 print("F1: ", f1)
-
-#incluir variacoes com acento

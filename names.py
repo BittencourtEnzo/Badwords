@@ -9,12 +9,11 @@ dic = {}
 for nome in listinha:
     dic[nome] = nome
 
+
 listinha = names_fem['nome']
 l = len(listinha)
 for nome in listinha:
     dic[nome] = nome
-
-
 
 
 def names(palavra):

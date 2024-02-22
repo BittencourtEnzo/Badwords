@@ -21,9 +21,22 @@ for palavrao in lista:
     if palavra.__contains__(palavrao):
         print("Funcionou")
 """
-
+"""
 dic = {"a":1,"b":2}
 
 var = "a"
 
 print(dic[var])
+"""
+"""
+string = "Manuela Davila"
+palavras = string.split()
+print(string)
+print(palavras)
+
+palavras.remove('Manuela')
+print(palavras)
+"""
+whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag"]
+if not "cu" in whitelist:
+    print("opa")

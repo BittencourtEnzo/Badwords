@@ -37,13 +37,10 @@ def filtro(palavra):
 #palavras = ['aborto','aranha','morte']
 
 def match_sorted(palavras):
+    if palavras[0] == "inopt":
+        return False
     #print(palavras)
     teste = list(filter(filtro,palavras))
-    #print(teste)
-    #print(len(teste))
-    #se for true é porque tinha palavrao
-    #print("Tinha palavrao =",teste != [])
-    #print(lista)
     return len(teste) != 0
 
 def palavrao_na_string_sorted(palavra):
