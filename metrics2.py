@@ -1,9 +1,10 @@
 from badwords2 import main
 import pandas as pd
+import time
 
 names_jae = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/nomes_jae.csv")
 names_sky = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/nomes_sky.csv")
-
+ti = time.time()
 positives = 0
 negatives = 0
 lista_positives = []
@@ -29,4 +30,6 @@ print("Negativos: ",negatives)
 
 for palavra in lista_positives:
     print(palavra)
-    
+tf = time.time()
+
+print(tf-ti)

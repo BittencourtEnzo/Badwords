@@ -30,7 +30,6 @@ def filtro(palavra):
         return True
     else:
         return False
-    
 
 #agora testar
 
@@ -43,7 +42,7 @@ def match_sorted(palavras):
     teste = list(filter(filtro,palavras))
     return len(teste) != 0
 
-def palavrao_na_string_sorted(palavra):
+def word_in_string_sorted(palavra):
     for palavrao in lista:
         #print(palavrao)
         if palavra.__contains__(palavrao):

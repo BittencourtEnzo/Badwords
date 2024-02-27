@@ -40,11 +40,11 @@ def match(palavras):
     teste = list(filter(filtro,palavras))
     return len(teste) != 0
 
-def palavrao_na_string(palavra):
+def word_in_string(palavra):
     for palavrao in lista:
         #print(palavrao)
         whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag"] 
         if palavrao not in whitelist and palavra.__contains__(palavrao):
-            #print("Funcionou")
+            #print(palavrao)
             return True
     return False
