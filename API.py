@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return "Teste"
+    return "No URL, depois da barra (/), digite o nome que deseja classificar."
     
 
 @app.get("/{nome}")
