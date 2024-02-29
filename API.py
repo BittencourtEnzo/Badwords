@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from badwords2 import main
+from .badwords2 import main
 
 app = FastAPI()
 

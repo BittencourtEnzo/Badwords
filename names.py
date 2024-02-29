@@ -1,7 +1,7 @@
 
 import pandas as pd
-names_mas = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/ibge-mas-10000.csv")
-names_fem = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/ibge-fem-10000.csv")
+names_mas = pd.read_csv("./Badwords/ibge-mas-10000.csv")
+names_fem = pd.read_csv("./Badwords/ibge-fem-10000.csv")
 
 listinha = names_mas['nome']
 l = len(listinha)

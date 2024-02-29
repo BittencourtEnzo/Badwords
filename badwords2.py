@@ -1,6 +1,6 @@
-from lista import match, word_in_string
-from lista_sorted import match_sorted, word_in_string_sorted
-from names import names
+from .lista import match, word_in_string
+from .lista_sorted import match_sorted, word_in_string_sorted
+from .names import names
 import time
 #caso 0: se tiver caracteres especiais
 

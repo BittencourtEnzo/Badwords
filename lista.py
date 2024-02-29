@@ -3,7 +3,7 @@
 #montar a lista
 lista = []
 
-f = open('/home/enzo.bittencourt/Badwords/Badwords/pt.txt','r')
+f = open('./Badwords/pt.txt','r')
 for i in range(1,844):
     linha=f.readline()
     linha = linha[0:len(linha)-1]
@@ -11,7 +11,7 @@ for i in range(1,844):
     lista.append(linha)
 f.close()
 
-f = open('/home/enzo.bittencourt/Badwords/Badwords/en.txt','r')
+f = open('./Badwords/en.txt','r')
 for i in range(1,423):
     linha = f.readline()    
     linha = linha[0:len(linha)-1]
