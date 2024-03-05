@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from .badwords2 import main
+from .names import hashmap
+
 
 app = FastAPI()
+mapa = hashmap()
 
 @app.get("/")
 def home():
@@ -11,7 +14,7 @@ def home():
 @app.get("/{nome}")
 def classificador(nome: str):
     
-    if main(nome):
+    if main(nome, mapa):
         return "true"
     else:
         return "false"

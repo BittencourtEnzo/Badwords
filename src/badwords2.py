@@ -1,6 +1,5 @@
 from .lista import match, word_in_string
 from .lista_sorted import match_sorted, word_in_string_sorted
-from .names import names
 import time
 #caso 0: se tiver caracteres especiais
 
@@ -46,7 +45,7 @@ def case2(word):
     return False
 
 #função main:
-def main(name):
+def main(name, hashmap):
     special_characters = "!@#$%^&*()-+?_=,<>/1234567890."
     if any(c in special_characters for c in name):        
         return True
@@ -54,8 +53,7 @@ def main(name):
     #verificar se esta na lista de nomes
     words = name.split()
     for word in words:
-        if not names(word):
-            
+        if word in hashmap:
             words.remove(word)
     
     if case1(name):
