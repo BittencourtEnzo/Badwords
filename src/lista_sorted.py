@@ -1,6 +1,6 @@
 lista = []
 
-f = open('../data/bagofwords.txt','r')
+f = open('./data/bagofwords.txt','r')
 for i in range(1,1266):
     linha = f.readline()
     linha = linha[0:len(linha)-1]

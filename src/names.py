@@ -1,5 +1,5 @@
 import pandas as pd
-nomes_ibge = pd.read_csv("../data/nomes.csv")
+nomes_ibge = pd.read_csv("./data/nomes.csv")
 
 names_list = nomes_ibge['nome']
 l = len(names_list)
