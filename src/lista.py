@@ -3,23 +3,13 @@
 #montar a lista
 lista = []
 
-f = open('./Badwords/pt.txt','r')
-for i in range(1,844):
-    linha=f.readline()
-    linha = linha[0:len(linha)-1]
-    linha = linha.lower()
-    lista.append(linha)
-f.close()
-
-f = open('./Badwords/en.txt','r')
-for i in range(1,423):
+f = open('../data/bagofwords.txt','r')
+for i in range(1,1266):
     linha = f.readline()    
     linha = linha[0:len(linha)-1]
     linha = linha.lower()
     lista.append(linha)
 f.close()
-
-#print(lista[0:4])
 
 #funcao do filtro
 def filtro(palavra):
@@ -36,15 +26,15 @@ def filtro(palavra):
 def match(palavras):
     if palavras[0] == "pinto":
         return False
-    #print(palavras)
+
     teste = list(filter(filtro,palavras))
     return len(teste) != 0
 
 def word_in_string(palavra):
     for palavrao in lista:
-        #print(palavrao)
+        
         whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag"] 
         if palavrao not in whitelist and palavra.__contains__(palavrao):
-            #print(palavrao)
+            
             return True
     return False

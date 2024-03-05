@@ -1,9 +1,12 @@
-from ..src.badwords2 import main
+import sys
+sys.path.append('../')
+
+from src.badwords2 import main
 import pandas as pd
 import time
 
-names_jae = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/nomes_jae.csv")
-names_sky = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/nomes_sky.csv")
+names_jae = pd.read_csv("../data/nomes_jae.csv")
+names_sky = pd.read_csv("../data/nomes_sky.csv")
 ti = time.time()
 positives = 0
 negatives = 0
@@ -28,8 +31,8 @@ for i in range(0,len(lista2)):
 print("Positivos: ",positives)
 print("Negativos: ",negatives)
 
-for palavra in lista_positives:
-    print(palavra)
-tf = time.time()
+#for palavra in lista_positives:
+#    print(palavra)
+#tf = time.time()
 
-print(tf-ti)
+#print(tf-ti)

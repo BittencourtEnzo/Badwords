@@ -12,6 +12,6 @@ def home():
 def classificador(nome: str):
     
     if main(nome):
-        return "Desculpe, é um palavrão. Poderia tentar de novo? Nome: ", nome
+        return "true"
     else:
-        return "Não é um palavrão. Nome: ", nome
+        return "false"
