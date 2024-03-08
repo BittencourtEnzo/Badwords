@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from .badwords2 import main
 from .names import hashmap
+import pandas as pd
 
 
 app = FastAPI()
@@ -18,3 +19,4 @@ def classificador(nome: str):
         return "true"
     else:
         return "false"
+    
