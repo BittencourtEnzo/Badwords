@@ -2,6 +2,7 @@ import sys
 sys.path.append('../')
 
 from src.badwords2 import main
+from src.names import hashmap
 import pandas as pd
 import time
 
@@ -12,9 +13,11 @@ positives = 0
 negatives = 0
 lista_positives = []
 
+mapa = hashmap()
+
 lista1 = names_jae['name']
 for i in range(0,len(lista1)):
-    if main(lista1[i]):
+    if main(lista1[i],mapa):
         positives += 1
         lista_positives.append(lista1[i])
     else:
@@ -22,7 +25,7 @@ for i in range(0,len(lista1)):
 
 lista2 = names_sky['name']
 for i in range(0,len(lista2)):
-    if main(lista2[i]):
+    if main(lista2[i],mapa):
         positives += 1
         lista_positives.append(lista2[i])
     else:

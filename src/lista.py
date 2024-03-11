@@ -3,8 +3,8 @@
 #montar a lista
 lista = []
 
-f = open('./data/bagofwords.txt','r')
-for i in range(1,1266):
+f = open('../data/bagofwords.txt','r')
+for i in range(1,1396):
     linha = f.readline()    
     linha = linha[0:len(linha)-1]
     linha = linha.lower()
@@ -33,7 +33,7 @@ def match(palavras):
 def word_in_string(palavra):
     for palavrao in lista:
         
-        whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag"] 
+        whitelist = ["cu","ass","pau","pinto","anal","hell","anta","anus","rola","anus","ku","imundo","fag","guei"] 
         if palavrao not in whitelist and palavra.__contains__(palavrao):
             
             return True
