@@ -1,14 +1,15 @@
+import sys
+sys.path.append('../')
+
 import pandas as pd
-from badwords2 import main
+from src.badwords2 import main
 
 lista_teste1 = ["acefalo", "arrombada", "arrombado", "asno", "babaca", "babuino", "baitola", "biba", "bicha", "bixa", "bixinha", "bobo", "boceta", "boceta", "boquete", "borra", "bosta", "buceta", "bundao", "burro", "cacete", "cadela", "cagar", "cala", "cale", "caralho", "caralio", "chupe", "come", "corno", "cu", "cusao", "cuzao", "desgracado", "disgracado", "egua", "enraba", "fdp", "fiderapariga", "fidumaegua", "filhodaputa", "filhodeumaputa", "foda", "fodase", "foder", "fuder", "fudeu", "fudido", "gay", "grelo", "idiota", "inferno", "jegue", "louco", "macaco", "mamar", "marica", "merda", "mijao", "otario", "pariu", "pau", "peidar", "pica", "pinto", "piriguete", "piroca", "piru", "porra", "puta", "quinto", "rapariga", "retardado", "rola", "siririca", "tesuda", "tomar", "vagabundo", "vaite", "veado", "velha", "viado", "xereca", "filhodaputa", "filhodaégua", "filhodeumaputa", "filhodeumaégua", "filhodumaputa", "filhodumaégua", "fodase", "vaidarocu", "vaidarorabo", "vaisefoder", "vaitefoder", "vaitomanocu", "vaitomanorabo", "vaitomarnocu", "vaitomarnorabo"]
 lista_teste2 = ["anal", "anus", "arse", "ass", "assfuck", "assmonkey", "assmuncher", "asswhore", "balls", "ballsack", "biatch", "bitch", "blowjob", "bollock", "badfuck", "beatoff", "bigass", "boner", "boob", "bugger", "butt", "buttplug", "clitoris", "cock", "coon", "crap", "cunt", "damn", "dick", "dickless", "dike", "dildo", "dyke", "dong", "drug", "drunk", "eatballs", "eatme", "excrement", "fag", "felching", "fellatio", "flange", "fuc", "fuck", "fucka", "fucked", "fucker", "fudgepacker", "hell", "homo", "jizz", "muff", "mothafucker", "nigga", "nigger", "penis", "piss", "poop", "prick", "pube", "pussy", "queer", "scrotum", "sex", "shit", "slut", "spunk", "tit", "tosser", "turd", "twat", "vomit", "vagina", "wank", "whore", "wtf", "wuss", "yellowman", "zipperhead"]
 
-names_mas = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/ibge-mas-10000.csv")
-names_fem = pd.read_csv("/home/enzo.bittencourt/Badwords/Badwords/ibge-fem-10000.csv")
+names = pd.read_csv("../data/nomes.csv")
 
-lista_teste3 = names_mas['nome']
-lista_teste4 = names_fem['nome']
+lista_teste3 = names['nome']
 
 def metricas():
     false_p=0
